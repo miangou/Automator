@@ -14,7 +14,7 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{StaticResource MaterialDesignFont}"
         WindowStartupLocation="CenterScreen"
-        Title="Automator" Icon="Resources/icon.ico" Height="Auto" Width="Auto">
+        Title="Automator(汉化By Natsumi 原作者Catboy96 项目原链接github.com/Catboy96/Automator )" Icon="Resources/icon.ico" Height="Auto" Width="Auto">
     <!-- Height="450" Width="800" -->
     
     <!-- Key bindings -->
@@ -90,16 +90,16 @@
                     <ToolBar Style="{DynamicResource MaterialDesignToolBar}" ClipToBounds="False">
 
                         <!-- Import Ducky Script -->
-                        <Button x:Name="btnImport" ToolTip="(Ctrl+I) Import Ducky Script" Click="btnImport_Click">
+                        <Button x:Name="btnImport" ToolTip="(Ctrl+I) 导入 Ducky 脚本" Click="btnImport_Click">
                             <materialDesign:PackIcon Kind="AutoFix" />
                         </Button>
                         <Separator />
 
                         <!-- File operations -->
-                        <Button x:Name="btnNewFile" ToolTip="(Ctrl+N) New file" Click="btnNewFile_Click">
+                        <Button x:Name="btnNewFile" ToolTip="(Ctrl+N) 新文件" Click="btnNewFile_Click">
                             <materialDesign:PackIcon Kind="File" />
                         </Button>
-                        <Button x:Name="btnSave" ToolTip="(Ctrl+S) Save" Click="btnSave_Click">
+                        <Button x:Name="btnSave" ToolTip="(Ctrl+S) 保存" Click="btnSave_Click">
                             <materialDesign:PackIcon Kind="ContentSave" />
                         </Button>
                         <Separator />
@@ -113,42 +113,42 @@
                             </materialDesign:ToggleButtonAssist.OnContent>
                             <ToggleButton.ToolTip>
                                 <StackPanel>
-                                    <TextBlock Text="Loop control" />
-                                    <TextBlock Text="OFF: Program will execute once." />
-                                    <TextBlock Text="ON:  Program will execute repeatly." />
+                                    <TextBlock Text="循环执行" />
+                                    <TextBlock Text="关: 程序将执行一次。" />
+                                    <TextBlock Text="开:  程序会重复执行。" />
                                 </StackPanel>
                             </ToggleButton.ToolTip>
                         </ToggleButton>
                         <Separator />
 
                         <!-- Input -->
-                        <Button ToolTip="(Alt+I) Input" x:Name="btnInput" Click="btnInput_Click">
+                        <Button ToolTip="(Alt+I) 输入" x:Name="btnInput" Click="btnInput_Click">
                             <materialDesign:PackIcon Kind="Keyboard" />
                         </Button>
                         <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}"
                                   x:Name="tgbReturn"  Margin="8 0 10 0">
-                            <materialDesign:PackIcon Kind="KeyboardReturn" Width="19" Height="19"/>
+                            <materialDesign:PackIcon Kind="KeyboardReturn" Width="19" Height="19" RenderTransformOrigin="0.354,0.354"/>
                             <materialDesign:ToggleButtonAssist.OnContent>
                                 <materialDesign:PackIcon Kind="KeyboardReturn" Width="19" Height="19"/>
                             </materialDesign:ToggleButtonAssist.OnContent>
                             <ToggleButton.ToolTip>
                                 <StackPanel>
-                                    <TextBlock Text="Send RETURN after input" />
-                                    <TextBlock Text="OFF: Input the specified text" />
-                                    <TextBlock Text="ON:  Input the specified text and send RETURN" />
+                                    <TextBlock Text="输入后发送 RETURN" />
+                                    <TextBlock Text="关：输入指定文本" />
+                                    <TextBlock Text="开：输入指定文本并发送 RETURN" />
                                 </StackPanel>
                             </ToggleButton.ToolTip>
                         </ToggleButton>
                         <Separator />
 
                         <!-- Delay -->
-                        <Button ToolTip="(Alt+D) Delay" x:Name="btnDelay" Click="btnDelay_Click">
+                        <Button ToolTip="(Alt+D) 延迟" x:Name="btnDelay" Click="btnDelay_Click">
                             <materialDesign:PackIcon Kind="ClockFast" />
                         </Button>
                         <Separator/>
 
                         <!-- Key stroke -->
-                        <Button ToolTip="Send key stroke" x:Name="btnKeyStroke" 
+                        <Button ToolTip="发送特殊按键" x:Name="btnKeyStroke" 
                             Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
                             CommandParameter="{x:Static Dock.Top}">
                             <materialDesign:PackIcon Kind="AppleKeyboardCommand" />
@@ -157,7 +157,7 @@
                         
 
                         <!-- Combo keys -->
-                        <ListBox x:Name="lstKeys" SelectedIndex="0" ToolTip="Send combo keys" SelectionMode="Multiple">
+                        <ListBox x:Name="lstKeys" SelectedIndex="0" ToolTip="发送组合键" SelectionMode="Multiple">
                             <ListBoxItem x:Name="keyCmd">
                                 <materialDesign:PackIcon Kind="AppleKeyboardCommand"/>
                             </ListBoxItem>
@@ -235,7 +235,7 @@
                          x:Name="txtCode"
                          AcceptsReturn="True" TextWrapping="Wrap"
                          VerticalScrollBarVisibility="Auto" 
-                         materialDesign:HintAssist.Hint="Code preview"
+                         materialDesign:HintAssist.Hint="代码预览"
                          FontFamily="Consolas" FontSize="16"/>
                 </Grid>
 

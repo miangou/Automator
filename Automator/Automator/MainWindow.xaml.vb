@@ -32,7 +32,7 @@ Class MainWindow
             .CheckPathExists = True
             .DefaultExt = "ino"
             .Filter = "Arduino Code File | *.ino"
-            .Title = "Save Arduino code to..."
+            .Title = "保存 Arduino 代码到..."
         End With
         If sfd.ShowDialog() = Forms.DialogResult.OK Then
             Dim strDir As String = IO.Path.GetDirectoryName(sfd.FileName) & "\" & IO.Path.GetFileNameWithoutExtension(sfd.FileName)
@@ -141,6 +141,14 @@ Class MainWindow
 
     Private Sub btnImport_Click(sender As Object, e As RoutedEventArgs)
         Dim dukStr As New DuckyScript
+
+    End Sub
+
+    Private Sub TgbLoop_Checked(sender As Object, e As RoutedEventArgs) Handles tgbLoop.Checked
+
+    End Sub
+
+    Private Sub TgbReturn_Checked(sender As Object, e As RoutedEventArgs) Handles tgbReturn.Checked
 
     End Sub
 
